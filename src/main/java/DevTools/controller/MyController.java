@@ -3,6 +3,7 @@ package DevTools.controller;
 import java.util.Date;
 import java.util.List;
 
+import org.springframework.objenesis.instantiator.basic.NewInstanceInstantiator;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -39,9 +40,15 @@ public class MyController {
 	}
      @GetMapping("/service")
      public String serviceHandle(Model m) {
+    	 m.addAttribute("title","this is title for thymlef");
+    	 m.addAttribute("subtitle", new Date().toLocaleString());
     	 return "service";
     	 
     	 
+     }
+     @GetMapping("/aboutNew")
+     public String newAbout(Model m) {
+    	 return "aboutNew";
      }
 
 }

@@ -7,7 +7,9 @@
 <body>
 	<h1>Service model added here</h1>
 	//we can use include/insert/replace
-	<footer id="hostTag" th:include="footer::footer1">//footer is page name and footer1 is fragment name
+	<footer id="hostTag" 
+	th:replace="footer::footer1 (${title},${subtitle})">
+	//footer is page name and footer1 is fragment name
 		
 	</footer>
 

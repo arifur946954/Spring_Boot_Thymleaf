@@ -5,9 +5,11 @@
 <title>Insert title here</title>
 </head>
 <body>
-<footer id="fragmentTag"  th:fragment="footer1">
+<footer id="fragmentTag"  th:fragment="footer1(title,subtitle)">
 |<div class="container">
 	<h1>this is footer </h1>
+	<h1 th:text="${title}"></h1>
+	<h3 th:text="${subtitle}"></h3>
 	<h3>tell me about city group</h3>
 	<p>every application has footer page so if we should add footer pages</p>
 </div>
