@@ -37,5 +37,11 @@ public class MyController {
     	 return "condition";
 		
 	}
+     @GetMapping("/service")
+     public String serviceHandle(Model m) {
+    	 return "service";
+    	 
+    	 
+     }
 
 }
